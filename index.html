@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  padding:0px;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+    /* header banner css*/
+.input-cnt {
+         display: flex;
+         Margin:3px ;font-size:17px;
+      }
+      .input-cnt > i {
+         min-width: 40px;
+         padding: 10px;
+         text-align: center;
+         background: lightgrey;
+         border-top-left-radius: 10px;
+         border-bottom-left-radius: 10px;
+      }
+      .input-cnt > input {
+         outline: none;
+         border: none;
+         padding: 10px;
+         border: 1px solid lightgrey;
+         border-top-right-radius: 10px;
+         border-bottom-right-radius:10px;
+         width: 80%;
+         transition: width .5s;
+         caret-color:#0076ff;
+      }
+      .input-cnt:hover > input {
+         border: 2px solid #0076ff;
+         width: 100%;
+      }
+      .input-cnt:hover > i {
+         background: #0076ff;
+         color: white;
+      }
+
+   .header{
+          width:100%;
+          height:190px;
+          background:brown;     
+          padding:0px;  
+          
+        }
+   .header > #headlogo {
+            height:140px;
+            background: ;
+            margin:0px;
+         }
+   .header > #headlogo > img {
+             width:100%;
+             height:135px;
+           
+           }  /* Header Banner Css close */
+       /* Navigation Bar Css */
+  .topnav {
+  overflow: hidden;
+  background-color:tomato;
+  position:sticky;top:0px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:dodgerblue;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+     /* Navigation Bar Css Close  */
+
+  /* Go To Top Button Css  */
+   #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:forestgreen;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+   /* Go To Top Button Close Css  */
+
+  /* Accordion Css   */
+   .accordion {
+  background-color:#444;
+  color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-radius:0px;
+  text-align:center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:active {
+  background-color: #444;
+  color:green;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color:silver ;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display:flex;
+  }
+  .panel > img {
+      height:200px;
+      width:150px;
+      margin:10px 5px;
+      border:0.2px solid black;
+        }
+   /*  Accordion Css Close */
+
+       /* $hortCut Button Css */
+      .smooth {
+          display:flex;
+          flex-wrap:wrap;
+          background:forestgreen;
+          position: ;
+         margin:0 auto;
+        }
+   .smooth > #like {
+           padding:5px 20px ;
+           width:auto;
+           font-size:20px;
+           margin:5px;
+           border-radius:10px;
+           background:powderblue;
+           color:black;border:none;
+           cursor:pointer;
+           text-decoration:none;
+          }   
+    .smooth > #like:hover { 
+            background:blue;
+            color:white;
+          }
+ 
+     /* $hortCut Button Css Close Here*/
+     /* Rabindranath Poets Css */
+    #rabindrapoem > img {
+            float:right;
+            height:140px;
+            width:130px;
+    }
+    #rabinpoet {
+           display:flex;
+          flex-wrap:wrap;
+        }
+    #rabinpoet > .box1 {
+           height:120px;
+            width:100px;
+         border:1px solid black;
+         margin:0px 5px 5px 10px;
+         text-align:center;
+         text-transform:capitalize;
+         border-radius:10px;
+         cursor:pointer;
+       
+        }
+    #rabinpoet > .box1 > a {
+             text-decoration:none;
+         }
+   #rabinpoet > .box1 > a > img {
+          height:100px;
+          width:100px;
+          border-radius:10px;
+         }
+  #rabindrapoem > a > #readmore {
+          border-radius:10px;
+          font-size:20px;
+          padding:10px 25px;
+          background:dodgerblue;
+          color:white;
+          margin:5px 5px 5px 20px;
+            border:1px solid white;
+          cursor:pointer;
+        }
+/* Rabindranath Poets Css close */
+
+   @media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+  @media only screen and (min-width: 600px) {
+         body {
+            background: pink;
+         }
+     .panel > img {
+             margin:10px auto;
+             width:250px;
+             height:300px;
+           }
+
+       .header {
+                 display:flex;
+                 justify-content:center;
+                 align-items:center;
+                 height:150px;
+                }
+         .header > #headlogo {width:30%;}
+         .header > .input-cnt {width:60%;margin:10px;}
+ 
+        .smooth {display:none;}
+      }
+</style>
+</head>
+<body>
+            <!-------Header Banner------->
+      <center>
+  <div class="header">
+        <div id="headlogo">
+          <img id="banner1"src="banner1.jpg"alt="website Logo">
+       </div>
+       <div class="input-cnt">
+            <i class="fa fa-fw fa-search"> </i>
+            <input type="search" placeholder="Search here..." />
+       </div>
+ <div></center>
+          <!----------Header Banner Close------------>
+
+       <!------Navigation Bar----->
+<div class="topnav" id="myTopnav">
+   <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+   <a href="#"><i class="fa fa-fw fa-book"></i> Poems </a>
+   <a href="#"><i class="fa fa-fw fa-comments"></i> Captions / Bio  </a> 
+   <a href="#"><i class="fa fa-fw fa-pencil"></i> Drawing / Art's</a>
+   <a href="#"><i class="fa fa-fw fa-book"></i> Story </a> 
+   <a href="#"onclick="come()"><i class="fa fa-fw fa-money"></i> Paytm Cash </a>
+   <a href="#"><i class="fa fa-fw fa-phone"></i> Contact Us </a>
+   <a href="#"><i class="fa fa-fw fa-user"></i> Others </a>
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div><!------Navigation Bar Close------>
+
+          <!------Language Changer------->
+    <button class="accordion">If You want To Change The Language (Click Here)</button>
+<div class="panel">
+     
+     <img src=lang1.jpg"alt="click 3dots">  
+     <img src=lang2.jpg"alt="click translate option">   
+   
+</div>
+       <!------Language Changer Close------->
+
+                        <!-----Go To Top Button----->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+ 
+   <div class="smooth">  <!--------ShortCut Buttons-------->
+         <a id="like" href="#rabindrapoem"> # Poems </a>
+         <a id="like" href="#"> # Caption / Bio </a>
+         <a id="like" href="#"> # Drawing </a>
+         <a id="like" href="#"> # Story </a>
+   </div><!------ShortCut Button Close-------->
+        
+        <!---------Rabindranath Poets--------------->
+     <div id="rabindrapoem">
+          <img src="rabin.jpg"title="Rabindra Nath Tagore"style="margin:5px;">
+          <h3 style="padding:0px 20px;"> Rabindranath Tagore  </h3>
+          <p style="padding:0px 20px;"> Poet </p>
+
+     <button class="accordion"> OverView / Biography (Click Here) </button>
+     <div class="panel">
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+     </div>
+
+    <h2 style="text-align:center;">Poems </h2>
+    <div id="rabinpoet"> <!---Books---->
+       <div class="box1"><a href="#"> <img src="book1.jpg"> Gitangali </a></div>
+       <div class="box1"><a href="#"> <img src="book2.jpg"> Gitangali </a></div>
+       <div class="box1"><a href="#"> <img src="book3.jpg"> Gitangali </a></div> 
+       <div class="box1"><a href="#"> <img src="book4.jpg"> Gitangali </a></div>
+       <div class="box1"><a href="#"> <img src="book5.jpg"> Gitangali </a></div> 
+       <div class="box1"><a href="#"> <img src="book6.jpg"> Gitangali </a></div>
+   </div>
+     <a href="#"> <button id="readmore"type="submit">Show More</button></a>
+</div>
+       <!---------Rabindranath Poets-closr-------------->
+
+
+
+
+
+   <script>
+                //Navigation javascript
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+};//Navigation javascript Close
+
+
+   // Get the Top button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};     //Go To Top Button Close
+
+
+   //Accordion Javascript Open Here
+   var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+             panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+};  //Accordion Javascript Close Here
+
+     function come() {  // Paytm Cash Alert Box... 
+           alert ("Features Coming Soon..") 
+         };
+
+
+
+
+</script>
+
+</body>
+</html>
